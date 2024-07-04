@@ -1,12 +1,258 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.clock-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-  }
-  
- 
+    padding: 20px;
+    width: 100%;
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    top: 0;
+    box-sizing: border-box;
+}
+
+.clock-item {
+    font-size: 1.5em;
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+#main-container {
+    display: flex;
+    padding: 20px;
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+#inside-container, #inside-container2  {
+    display: flex;
+    align-items: center; /* Added */
+    justify-content: center; 
+    width: 50%;
+}
+#inside-container3 {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center; /* Center the buttons vertically if needed */
+    margin-top: 20px; /* Add some top margin if needed */
+}
+
+
+#work-time, #break-time {
+    width: calc(100% - 40px);
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+#pomodoro {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+}
+
+#timer-display {
+    font-size: 8em;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    color: inherit; /* Inherit the color from the parent or be set dynamically */
+}
+
+
+#schedule {
+    margin-top: 20px;
+    margin-right: 120px;
+    width: 100%;
+}
+
+#schedule-items {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.schedule-item {
+    width: 100%;
+    margin: 5px 0;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circular-ring {
+    width: 210px; /* Match the viewBox size */
+    height: 210px; /* Match the viewBox size */
+}
+
+
+.minimalist-button {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #b0c4de;
+    color: #333;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.minimalist-button:hover {
+    background-color: #add8e6;
+}
+
+.start-button {
+    font-size: 1.2em;
+    padding: 15px 30px;
+    margin-top: 20px;
+}
+
+.stop-button {
+    font-size: 1em;
+    padding: 10px 20px;
+}
+
+.continue-button {
+    font-size: 1em;
+    padding: 10px 20px;
+}
+
+#to_do {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#to_do h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+#new-todo {
+    width: calc(100% - 40px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#add-todo {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #b0c4de;
+    color: #333;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#add-todo:hover {
+    background-color: #add8e6;
+}
+
+#todo-list {
+    width: calc(100% - 40px);
+    list-style-type: none;
+    padding: 0;
+}
+
+#todo-list li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#todo-list li input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#trees-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#trees-container h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+#trees {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    gap: 0; /* Remove gap between trees */
+    justify-content: flex-start;
+    align-items: flex-end;
+    background-color: #228B22; /* Green ground */
+    padding: 10px 0;
+}
+
+.tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 0 5px; /* Adjust margin to remove gaps between green grounds */
+}
+
+.trunk {
+    width: 20px;
+    height: 50px;
+    background-color: #8b4513;
+    border-radius: 3px;
+}
+
+.leaves {
+    width: 70px;
+    height: 70px;
+    background-color: inherit; /* Use the tree's color */
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1em;
+    margin-top: -35px; /* Adjust this value as needed to position leaves correctly */
+}
