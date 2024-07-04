@@ -19,3 +19,4 @@ This project is a web application that combines a Pomodoro timer, a To-Do list, 
    - Visual representation of completed Pomodoro sessions as trees.
    - Each tree's size corresponds to the length of the work session.
 
+[View the live demo here](https://deryatnmz.github.io/task-manager-and-pomodoro-timer/)
